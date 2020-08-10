@@ -1,2 +1,2 @@
-# raczviktor.github.io
-Demo page
+# dev_training.io
+Ez egy gyakorló repository.
