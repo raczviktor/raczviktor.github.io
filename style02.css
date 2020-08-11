@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "roboto";
+    src: url("roboto/Roboto-Medium.ttf");
+}
+
+html {
+    font-family: "roboto", sans-serif;
+}
+
+
+.img_div {
+    background-color: cadetblue;
+}
+
+.align {
+    text-align: right;
+    background-color: cornflowerblue;
+}
+
+.align2 {
+    background-color: lightcoral;
+}
+
+#parancs {
+    background-color: lightcoral;
+}
+
+#mit {
+    background-color: cornflowerblue;
+}

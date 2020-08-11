@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style02.css">
+    <style>
+        h5 {
+            color: crimson;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="index.html">Főoldal</a>
+    <a href="orders.html">Parancsok</a>
+    <a href="git.html">Git</a>
+    <a href="dev_env.html">Fejlesztői környezet</a>
+    <a href="html.html">Html</a>
+
+    <h1>CSS</h1>
+    <h3>Fajtái</h3>
+    <h4>Inline stílus: elemenként megadva.</h4>
+    <ul>
+        <li>Az elemben deklarálva.
+            <h6 style="color: blue;">pl: style="color: színszín;"</h6>
+        </li>
+    </ul>
+    <h4>Internal stílus: kiszervezve a head részbe.</h4>
+    <ul>
+        <li>A head részben deklarálva.
+            <h5> pl: style h5 {color: színszín;} /style.</h5>
+        </li>
+    </ul>
+    <h4>External stílus: kiszervezve külön oldalra.</h4>
+    <ul>
+        <li>Külön css kiterjesztésű oldalon deklarálva. A kívánt oldalon, a head részben linkelve a link
+            rel="stylesheet" href="CSS FÁJL HELYE"
+            <p> pl: style p {color: színszín; font-size: SZÁMpx;} </p>
+        </li>
+    </ul>
+    <h3>Felépítés (szintaxis)</h3>
+    <h4>Direktíva</h4>
+    <ul>
+        <li>Selctor (mire vonatkozik)</li>
+        <li>Deklaráció (mit tegyen vele)</li>
+    </ul>
+    <img src="css_directive.jpg" alt="CSS">
+    <h3>Betűtípus</h3>
+    <ul>
+        <li>Beállítása: font-family: BETŰTÍPUSNEVE</li>
+        <li>Külső betűtípus használata</li>
+        <ol>
+            <li>
+                <a href="https://fonts.google.com/">
+                    <em>GoogleFonts</em>
+                </a>
+            </li>
+            <li>Ékezetes karakterek teszteléséhez: Árvíztűrő tükörfúrógép.</li>
+            <li>Letöltés, vagy Link elhelyezése a html-ben, vagy css-ben.</li>
+        </ol>
+    </ul>
+    <h4>Saját betűtípus használata</h4>
+    <ul>
+        <li>@font-face {font-family: "KÍVÁNTNÉV"; src: url("ELÉRÉSIÚT");}</li>
+    </ul>
+    <h4>Szövegformázás</h4>
+    <ul>
+        <li>betűtípus/font-family</li>
+        <li>betűszín/color</li>
+        <li>betűméret/font-size</li>
+        <li>szöveg igazítás/text-align</li>
+        <li>szöveg átalakítás/text-transform</li>
+        <li>sormagasság/line-height</li>
+        <li>betűvastagság/font-weight</li>
+        <li>elemek megjelölése</li>
+        <ul>
+            <li>egyedi azonosító/id: id="KÍVÁNTNÉV", css-ben #MEGADOTTNÉV {DEKLARÁCIÓ}</li>
+            <li>osztályokba sorolás/class: class="KÍVÁNTNÉV", css-ben .MEGADOTTNÉV {DEKLARÁCIÓ}</li>
+        </ul> 
+        <li>szöveg tagolás</li>
+        <ul>
+            <li>szövegrész osztályba sorolás/span class</li>
+            <li>terület osztályba sorolás/div class</li>
+        </ul>   
+    </ul>
+    <a href="https://hu.lipsum.com/">
+        <em>Lorem Ipsum Generator</em>
+    </a>
+
+</body>
+
+</html>
