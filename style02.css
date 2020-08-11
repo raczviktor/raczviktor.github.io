@@ -5,10 +5,12 @@
 
 html {
     font-family: "roboto", sans-serif;
+    background-color: lightcyan;
 }
 
 
 .img_div {
+    box-shadow: 10px 10px 10px black;
     background-color: cadetblue;
 }
 
@@ -28,3 +30,11 @@ html {
 #mit {
     background-color: cornflowerblue;
 }
+.menu {
+    position: fixed;
+    border: lightblue;
+    padding: 3px;
+    margin: 0 0 0 85%;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
