@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Git</title>
-    <link rel="stylesheet" href="style02.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
-    <a href="index.html">Főoldal</a>
-    <a href="orders.html">Parancsok.</a>
-    <a href="html.html">Html</a>
-    <a href="dev_env.html">Fejlesztői környezet</a>
-    <a href="css.html">CSS</a>
-    <a href="num_sys.html">Számrendszerek</a>
-    
-    <h1>Fájlok állapota a git-ben (add/commit/remove)</h1>
+    <div class="menu">
+        <button><a href="index.html">Főoldal</a></button>
+        <button><a href="orders.html">Parancsok</a></button>
+        <button><a href="dev_env.html">Fejlesztői környezet</a></button>
+        <button><a href="html.html">Html</a></button>
+        <button><a href="num_sys.html">Számrendszerek</a></button>
+        <button><a href="selctor.html">Selector</a></button>
+        <button><a href="css.html">CSS</a></button>
+    </div>
+
+    <h1>Git</h1>
+
+    <h2>Fájlok állapota a git-ben (add/commit/remove)</h2>
     <ul>
-        <li>Untracked: nem figyelt</li> 
-        <li>Unmodified: nem módosított</li> 
+        <li>Untracked: nem figyelt</li>
+        <li>Unmodified: nem módosított</li>
         <li>Modified: módosított</li>
         <li>Staged: mentésre előkészített</li>
     </ul>
-    <h1>Személyes oldal létrehozása Github-bal.</h1>
+
+    <h2>Személyes oldal létrehozása Github-bal.</h2>
     <ol>
         <li>repo létrehozása (A név kötött: felhasználónév.github.io)</li>
         <li>repo klónozása (Lásd: <a target="blanket" href="dev_env.html">Fejlesztői környezet</a>)</li>
@@ -30,5 +38,7 @@
         <li>cmd git commit -m MEGJEGYZÉS</li>
         <li>cmd git push</li>
     </ol>
+
 </body>
+
 </html>

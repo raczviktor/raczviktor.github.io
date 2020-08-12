@@ -1,6 +1,6 @@
 @font-face {
     font-family: "roboto";
-    src: url("roboto/Roboto-Medium.ttf");
+    src: url("fonts/Roboto-Medium.ttf");
 }
 
 html {
@@ -36,5 +36,12 @@ html {
     padding: 3px;
     margin: 0 0 0 85%;
     background-color: rgba(200, 200, 200, 0.1);
+    display: inline-block;
+    
+}
+
+.menu button {
+    display: block;
+    position: top right;
 }
 

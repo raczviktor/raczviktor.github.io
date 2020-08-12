@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <link rel="stylesheet" href="css/selector.css">
+</head>
+<body>
+    <div class="menu">
+        <button><a href="index.html">Főoldal</a></button>
+        <button><a href="orders.html">Parancsok</a></button>
+        <button><a href="git.html">Git</a></button>
+        <button><a href="dev_env.html">Fejlesztői környezet</a></button>
+        <button><a href="html.html">Html</a></button>
+        <button><a href="num_sys.html">Számrendszerek</a></button>
+        <button><a href="css.html">CSS</a></button>
+    </div>
+
+    <h1>Login</h1>
+    <div class="login_div">
+        <div class="form_group">
+            <label>E-mail</label>
+            <input class="form_control" type="email" name="e-mail">
+        </div>
+        <div class="form_group">
+            <label>Password</label>
+            <input class="form_control" type="password" name="password">
+        </div>
+        <div class="form_group">
+            <button class="submit_btn" >Login</button>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li>szelektor belüli kiválasztás: szelektor szóköz tagtípus</li>  
+            <li>szelektor belüli egy bizononyos elem kiválasztás: szelektor szóköz tagtípus[valamilyen atribútum]</li> 
+            <li>névrész alapján classra hivatkozás =class*="NÉVRÉSZ"</li>
+            <li>név kezdete alapján classra hivatkozás =class^="NÉVKEZDETE"</li> 
+            <li>név végződése alapján classra hivatkozás =class$="NÉVVÉGE"</li>
+            <li>pszeudo szelektor</li>
+            <ul>
+                <li>szelektor:hover akkor érvényesül, ha felette van az egér</li>
+                <li>szelektor:focus akkor érvényesül, ha használatban van az elem</li>
+                <li>lista szelektor:last-child/first-child a lista utolsó/első eleme</li>
+            </ul>
+        </ul>
+    </div>
+</body>
+</html>

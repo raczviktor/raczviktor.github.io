@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style03.css">
+
+</head>
+<body>
+    <div>
+        <button><a href="index.html">Főoldal</a></button>
+        <button><a href="orders.html">Parancsok</a></button>
+        <button><a href="git.html">Git</a></button>
+        <button><a href="dev_env.html">Fejlesztői környezet</a></button>
+        <button><a href="html.html">Html</a></button>
+        <button><a href="num_sys.html">Számrendszerek</a></button>
+        <button><a href="selctor.html">Selector</a></button>
+        <button><a href="css.html">CSS</a></button>
+    </div>
+
+    <h1>Űrlapok</h1>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>Személyes Adatok</legend>
+                    <div>
+                        <label for="name">Név:</label>
+                        <input id="name" name="name" type="text" required>
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input id="email" name="adress" type="text" required>
+                    </div>
+                    <div>
+                        <label for="address">Cím:</label>
+                        <input id="address" name="address" type="text" required>
+                    </div>
+                    <div>
+                        <label for="comment">Megjegyzés:</label>
+                        <textarea name="comment" id="comment" rows="5"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Checkbox</legend>
+                    <div>
+                        <input checked id="nothing" name="checkbox" type="radio" value="0">
+                        <label for="nothing">Nothing</label>
+                    </div>
+                    <div>
+                        <input id="cb01" name="checkbox" type="radio" value="300">
+                        <label for="cb01">01</label>
+                    </div>
+                    <div>
+                        <input id="cb02" name="checkbox" type="radio" value="600">
+                        <label for="cb02">02</label>
+                    </div>
+                    <div>
+                        <input id="cb03" name="checkbox" type="radio" value="1000">
+                        <label for="cb03">03</label>
+                    </div>    
+                </fieldset>
+            </form>
+        </div>
+
+    <h3>Tagek</h3>
+    <div>
+        <ul>
+            <li>címke =label</li>
+            <li>input =mező</li>
+            <li>címke mezőhöz kötése =for</li>
+            <li>checkbox</li>
+            <li>radio</li>
+            <li>kártya =fieldset</li>
+            <li>kártyacím =legend</li>
+
+        </ul>
+    </div>
+</body>
+</html>
