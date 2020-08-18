@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b32957fb18.js" crossorigin="anonymous"></script>
+    <style>
+        .focim {
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        h4 {
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        .pelda {
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Főoldal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.w3schools.com/">W3School</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="urlap.html">Űrlap</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div>
+        <button><a href="orders.html">Parancsok</a></button>
+        <button><a href="git.html">Git</a></button>
+        <button><a href="dev_env.html">Fejlesztői környezet</a></button>
+        <button><a href="html.html">Html</a></button>
+        <button><a href="num_sys.html">Számrendszerek</a></button>
+        <button><a href="selctor.html">Selector</a></button>
+        <button><a href="css.html">CSS</a></button>
+        <button><a href="urlap.html">Űrlap</a></button>
+        <button><a href="index.html">Főoldal</a></button>
+    </div>
+    <div class="focim">
+        <h1>Bootstrap</h1>
+        <a target="blanket" href="https://getbootstrap.com/">Bootsrap</a>
+    </div>
+    <ul>
+        <li>Bootstrap integrálás:</li>
+        <ul>
+            <li>link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+                crossorigin="anonymous"> </li>
+        </ul>
+        <li>A bootstrap rácsrendszer 12 egység széles</li>
+        <li>A méret megadása lehet:
+            <ul>
+                <li>előre állított pl. class="col-sm" (Alapértelmezett kis felbontáshoz)</li>
+                <li>általunk megszabott pl. class="col-4" (4/12 széles egy oszlop)</li>
+                <li>több paraméter pl. class="col-12 col-md-6 col-lg-3" (Nagy felbontásnál 3/12, közepesnél 6/12, kis
+                    felbontásnál pedig 12/12 széles egy cella)</li>
+            </ul>
+    </ul>
+    <h4>Példa rácsrendszerre</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
+        </div>
+    </div>
+    <h4>Navigációs sáv</h4>
+    <ul>
+        <li>Lásd fent</li>
+    </ul>
+    <h4>Alert</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="alert alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                    A simple secondary alert—check it out!
+                </div>
+                <div class="alert alert-success" role="alert">
+                    A simple success alert—check it out!
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    A simple warning alert—check it out!
+                </div>
+                <div class="alert alert-info" role="alert">
+                    A simple info alert—check it out!
+                </div>
+                <div class="alert alert-light" role="alert">
+                    A simple light alert—check it out!
+                </div>
+                <div class="alert alert-dark" role="alert">
+                    A simple dark alert—check it out!
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4>Táblázat</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table table-striped table-bordered table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Vezetéknév</th>
+                            <th>Keresztnév</th>
+                            <th>Életkor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <ul>
+        <li>class table = alap formázás</li>
+        <li>class table-striped = váltott csíkozás</li>
+        <li>class table-bordered = kontúr</li>
+        <li>class table-hover = kurzor alatti rész kiemelése</li>
+    </ul>
+    <h4>Űrlapok</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address 1</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            value="kiss.janos@valami.hu" readonly>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address 2</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <ul>
+        <li>form = űrlap</li>
+        <li>class=form-inline = egysorba rendelés</li>
+        <li>readonly = nem szerkeszthető</li>
+    </ul>
+    <h4>Gombok</h4>
+    <div class="container pelda">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Vezetéknév</th>
+                            <th>Keresztnév</th>
+                            <th>Életkor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        módosítás
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        eltávolítás
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        módosítás
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        eltávolítás
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        módosítás
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        eltávolítás
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        módosítás
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        eltávolítás
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <h4>Ikononok</h4>
+    <a href="https://fontawesome.com/">ikonok</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Vezetéknév</th>
+                            <th>Keresztnév</th>
+                            <th>Életkor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kis</td>
+                            <td>János</td>
+                            <td>55</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-info">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
