@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <button><a href="index.html">Főoldal</a></button>
+    <h1>Javascript</h1>
+    <a target="blanket" href="https://www.javascript.com/">https://www.javascript.com/</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h3>Rendelés</h3>
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Feltét</label>
+                        <input type="text" name="top-input" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Mennyiség</label>
+                        <input type="number" name="amount-input" class="form-control" value="1">
+                        <small class="form-text text-muted">Minimum 1, Maximum 10db</small>
+                    </div>
+                    <div class="form-group">
+                        Fizetendő: <span class="show-amount">0
+                        </span>Ft
+                    </div>
+                    <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+    </div>
+    <ul>
+        <li>A változók neve nem kezdődhet speciális karakterrel. Nem tartalmazhat szóközt. Legyen kifejező. Javasolt a
+            CamelCase.</li>
+        <li>Változók típusai</li>
+        <ul>
+            <li>boolean</li>
+            <li>number</li>
+            <li>string</li>
+            <li>null</li>
+            <li>undefined</li>
+        </ul>
+        <li>script /beágyazás</li>
+        <li>let váltózónév /deklaráció (értékadás nélküli meghatározás)</li>
+        <li>let változónév = érték /változó létrehozása és értékének megadása</li>
+        <li>const változó /megváltoztathatatlan változó (állandó)(kötelező definiálni)</li>
+        <li>typeof változó /változó típusának lekérdezése</li>
+        <li>változó. /a változó lehetőségei</li>
+        <li>szám % szám /a maradék értéke</li>
+        <li>szám ** szám /hatványozás</li>
+        <li>string változó + valami /szöveg hozzáadása</li>
+        <li>változó = null /változó kiürítése</li>
+        <li>inplicit típuskonverzió: a változó hiába string ha csak számoknál elvégezhető műveletet akarunk végezni
+            akkor átalakítja számmá </li>
+        <li>változó = aKívántTípus(érték) /konstruktor </li>
+        <li>változó.toKívántTípus /explicit típuskonvezió</li>
+        <li>változó.toFixed(szám) /tizedesek száma</li>
+        <li>változó.toPrecision(szám) /összes karakter száma(kerekít)</li>
+        <li>parseInt(valami) /számmá alakít</li>
+        <li>parseFloat(szám) /tizedestörtes számmá alakít</li>
+        <li>document.querySelector(Szelektor[pl."input[name='amount-input']"])</li>
+        <li>változó.replace("cserélendőSzöveg","csereCéljaSzöveg") /felülírja a megadott szövegrészletet</li>
+        <li>változó.indexOf("keresettSzöveg") /szöveg keresése (nem szerepel:-1,szerepel: megjeleníti, hogy a string hanyadik karakterétől kezdődik)</li>
+        <li>változó.trim() /szóközök levágása</li>
+        <li>változó.concat(változó) /változók eggyesítése</li>
+        <li>Boolean</li>
+        <ul>
+            <li>Boolean változóban minden ami nem nulla true</li>
+            <li>= /értékmegadás</li>
+            <li>== /értékegyenlőség ellenőrzés</li>
+            <li>=== /érték és típus egyenlőség ellenőrzés</li>
+            <li>! /eredmény megfordítása</li>
+            <li>&& /mindkét feltételnek teljesülnie kell</li>
+            <li>|| /valamelyik feltételnek teljesülnie kell</li>
+        
+
+        </ul>
+      
+    </ul>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
