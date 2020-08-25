@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <button><a href="index.html">Főoldal</a></button>
     <h1>Javascript</h1>
     <a target="blanket" href="https://www.javascript.com/">https://www.javascript.com/</a>
@@ -39,8 +40,8 @@
             </div>
             <div class="col-3"></div>
         </div>
-
     </div>
+
     <ul>
         <li>A változók neve nem kezdődhet speciális karakterrel. Nem tartalmazhat szóközt. Legyen kifejező. Javasolt a
             CamelCase.</li>
@@ -72,7 +73,8 @@
         <li>parseFloat(szám) /tizedestörtes számmá alakít</li>
         <li>document.querySelector(Szelektor[pl."input[name='amount-input']"])</li>
         <li>változó.replace("cserélendőSzöveg","csereCéljaSzöveg") /felülírja a megadott szövegrészletet</li>
-        <li>változó.indexOf("keresettSzöveg") /szöveg keresése (nem szerepel:-1,szerepel: megjeleníti, hogy a string hanyadik karakterétől kezdődik)</li>
+        <li>változó.indexOf("keresettSzöveg") /szöveg keresése (nem szerepel:-1,szerepel: megjeleníti, hogy a string
+            hanyadik karakterétől kezdődik)</li>
         <li>változó.trim() /szóközök levágása</li>
         <li>változó.concat(változó) /változók eggyesítése</li>
         <li>Boolean</li>
@@ -84,12 +86,63 @@
             <li>! /eredmény megfordítása</li>
             <li>&& /mindkét feltételnek teljesülnie kell</li>
             <li>|| /valamelyik feltételnek teljesülnie kell</li>
-        
-
         </ul>
-      
+        <li>isNaN /ha nem szám</li>
+        <li>? valami : valami; /akkor egyenlő ezzel különben azzal</li>
+        <li>Függvények</li>
+        <ul>
+            <li>function /fügvény</li>
+            <li>felépítése: function név() {parancsok;}</li>
+            <li>Szabályok</li>
+            <ul>
+                <li>Az elnevezés legyen beszédes!</li>
+                <li>A funkciók neve ne legyen félreérthető!</li>
+                <li>Kerüld az O és I karaktereket.</li>
+                <li>Kommentelj, ha szükséges! //Komment</li>
+                <li>Formázd a kódot!</li>
+                <li>CleanCode (fügvény max 10 sor)</li>
+            </ul>
+            <li>let-tel létrehozott változót egy blokkon móbelül nem lehet újra létrehozni</li>
+            <li>const változó neve mindíg nagy betű</li>
+            <li>const tartalma nem felülírható</li>
+        </ul>
+        <li>Tömb</li>
+        <ul>
+            <li>tömb változó = [valami, valami];</li>
+            <li>tömb elemének kiválasztása változó[sorszám]</li>
+            <li>Array.isArray(változó) /megmondja, hogy a változó tömb-e</li>
+            <li>tömb.push(valami) /hozzáad egy új elemet a tömb végéhez</li>
+            <li>tömb.pop() /elveszi a tömb utolsó elemét</li>
+            <li>tömb.unshift(valami) /hozzáad egy új elemet a tömb elejéhez</li>
+            <li>tömb.shift() /elveszi a tömb első elemét</li>
+            <li>tömb.slice(sorszám,sorszám) /tömb vágása sorszámtól sorszámig (az eredeti tömböt nem módosítja)</li>
+            <li>tömb.splice(sorszám,darab) /tömbből sorszámtól db elem eltávolítása (módosítja az eredeti tömböt)</li>
+            <li>tömb.splice(sorszám,0,valami) /hozzáad a sorszámtól egy vagy több adatot (módosítja az eredeti tömböt)
+            </li>
+            <li>tömb.join("") /a tömb elemei közé szúrja a kívánt tartalmat</li>
+            <li>tömb értékének funkcióban történő módosítása felülírja az eredetit</li>
+        </ul>
+        <li>Ciklusok</li>
+        <ul>
+            <li>for</li>
+            <ul>
+                <li>for (let változónév = kezdőérték; feltétel; miTörténjen) {}</li>
+                <li>for (let i = 0; i < 5; i++) {} /Létrehoz egy változót, aminek az értéke 0. Addig ismételje a ciklust, amíg a változó értéke kisebb, mint öt. Ha kisebb, akkor növelje egyel az értékét.</li>
+            </ul>
+        </ul>
+        <li>Operátorok</li>
+        <ul>
+            <li></li>
+        </ul>
     </ul>
+
     <script src="js/main.js"></script>
+    <script src="js/scope.js"></script>
+    <script src="js/parameter.js"></script>
+    <script src="js/ciklus.js"></script>
+    <script src="js/operator.js"></script>
+    <script src="js/ternary.js"></script>
+    <script src="js/algo.js"></script>
 
 </body>
 
