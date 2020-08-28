@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <button><a href="index.html">Főoldal</a></button>
+    <h1>Backend</h1>
+    <button id="submitButton">
+        <a target="blanket" href="https://nodejs.org/en/">Nodejs</a>
+    </button>
+    <button>
+        <a target="blanket" href="https://www.npmjs.com/">Npmjs</a>
+    </button>
+
+    <h4>Telepítés egy helyre</h4>
+    <ol>
+        <li>Telepítsd a Node.js-t</li>
+        <li>Cmd-vel lépj be a kívánt mappába</li>
+        <ul>
+            <li>npm i json-server</li>
+        </ul>
+        <li>A telepítés helyén hozz létre egy új js fájlt.</li>
+        <ul>
+            <li>const json-server = require("json-server");</li>
+        </ul>
+        <li>A mappában használható a json-server.</li>
+    </ol>
+    <h4>Telepítés Globálisan</h4>
+    <ol>
+        <li>Telepítsd a Node.js-t</li>
+        <li>Cmd</li>
+        <ul>
+            <li>npm i json-server -g</li>
+            <li>Globális telepítés esetén a 
+                C:\Users\<b>Aktuális felhasználó</b>\AppData\Roaming\npm\node_modules\json-server helyen jön létre. </li>
+        </ul>
+        <li>Az egész gépen használható az json-server.</li>    
+    </ol>
+    <h4>Package telepítése</h4>
+    <ol>
+        <li>Cmd-vel lépj be a kívánt mappába.</li>
+        <ul>
+            <li>npm init -y</li>
+        </ul>
+    </ol>
+    <h4>Package törlése</h4>
+    <ol>
+        <li>Cmd-vel lépj be a kívánt mappába.</li>
+        <ul>
+            <li>npm remove json-server</li>
+        </ul>
+        <li>A json-server package eltávolítva.</li>
+    </ol>
+    <h4>Használat (jason-server)</h4>
+    <ul>
+        <li>Tetszőleges nevű és tartalmú .json fájl létrehozása egy mappában.</li>
+        <li>Elindítani a cmd-ből, bárhonnan: json-server --watch FORRÁS </li>
+    </ul>
+    <h4>JSON</h4>
+    <ul>
+        <li>közös nyelv</li>
+        <li>ellenörzéshez: <a href="https://jsonformatter.curiousconcept.com/">https://jsonformatter.curiousconcept.com/</a></li>
+        <li>a kulcsokat is "jelbe kell tenni</li>
+        <li>a boolean-t és a numbert nem kell idézőjelbe tenni</li>
+        <li>json tartalom js-ben kezelése JSON.parse</li>
+        <ul>
+            <li>példa</li>
+            <ul>
+                <li>
+                    let json = `{
+                    "users": [
+                        {"id": 1, "name": "Big Tom", "email": "bigtom@gmail.com" },
+                        {"id": 2, "name": "Little Jimmy", "email": "liljim@gmail.com" },
+                        {"id": 3, "name": "Mid John", "email": "midjohn@gmail.com" }
+                    ],
+                    "comments": [
+                        {"id": 1, "body": "some comment", "userId": 1}
+                    ]
+                    }`;
+                </li>
+                <li>JSON.parse(json);</li>
+            </ul>
+        </ul>
+        <li>js tartalom json-ben kezelése JSON.stringify</li>
+        <ul>
+            <li>példa</li>
+            <ul>
+                <li>
+                    let json =  [
+                    {surname: "Berger", firstname: "Whitney", age: 22},
+                    {surname: "Kovács", firstname: "Béla", age: 32},
+                    {surname: "Rostás", firstname: "Márió", age: 12},
+                    {surname: "Piros", firstname: "Gizella", age: 43},
+                    {surname: "Zöld", firstname: "Gábor", age: 42},
+                    {surname: "Maros", firstname: "Péter", age: 41},
+                    {surname: "Gelencsér", firstname: "Lajos", age: 31},
+                    ];
+                </li>
+                <li>JSON.stringify(json);</li>
+            </ul>
+        </ul>
+    </ul>
+    <h4>Async</h4>
+    <ul>
+        <li>
+            const asyncDall = () => { setTimeout( () => { return {message: "Ez egy időzített üzenet."};},2000);}
+        </li>
+        <li>Callback fv</li>
+        <ul>
+            <li>
+                const buttonClickHandler = () => console.log("Katt");
+                const button = document.querySelector("#submitButton");
+                button.addEventListener("click", buttonClickHandler);
+                console.log("Utolsó utasítás");
+            </li>
+        </ul>
+        <li>Promise fv</li>
+        <ul>
+            <li>fulfill/reject</li>
+            <li>
+                const myPromise = new Promise( (resolve, reject) => {
+                    setTimeout( () => {
+                        resolve({name: "Piri"});
+                    }, 3000);
+                });
+                myPromise.then(
+                    data => console.log(data),
+                    err => console.error(err)
+                );
+            </li>
+            <li>
+                const myPromise2 = new Promise( (resolve, reject) => {
+                    setTimeout( () => {
+                        reject({error: "Not found!"});
+                    }, 3000);
+                });
+                myPromise.then(
+                    data => console.log(data),
+                    err => console.error(err)
+                );
+            </li>
+        </ul>
+        <li>Fetch API</li>
+        <ul>
+            <li>az oldal frissülése nélküli adatbekérés a háttérben</li>
+            <li>
+                let fetchInit = {
+                    method: "GET",
+                    headers: new Headers(),
+                    mode: "cors",
+                    cache: "default"
+                };
+                fetch("http://localhost:3000/users", fetchInit).then(
+                    data => data.json(),
+                    err => console.error(err)
+                ).then(
+                    users => console.log(users)
+                );
+            </li>
+        </ul>
+    </ul>
+</body>
+</html>

@@ -21,21 +21,31 @@
             <div class="col-3"></div>
             <div class="col-6">
                 <h3>Rendelés</h3>
-                <form action="">
+
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>Kedves vásárló!</strong> 
+                    A rendeléshez kérjük töltse ki az ürlapot.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form id="orderForm" action="">
                     <div class="form-group">
                         <label for="">Feltét</label>
-                        <input id="topInput" type="text" name="top-input" class="form-control">
+                        <select id="topInput" name="top-input" class="form-control"></select>
                     </div>
                     <div class="form-group">
                         <label for="">Mennyiség</label>
                         <input type="number" name="amount-input" class="form-control" value="1">
-                        <small class="form-text text-muted">Minimum 1, Maximum 10db</small>
+                        <small class="form-text text-muted">
+                            Minimum 1, Maximum 10db
+                        </small>
                     </div>
                     <div class="form-group">
-                        Fizetendő: <span class="show-amount">0
-                        </span>Ft
+                        Fizetendő: <span class="show-amount">0</span>Ft
                     </div>
-                    <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button>
+                    <button onclick="calcAmount()" type="submit" class="btn btn-primary">Megrendelés</button>
                 </form>
             </div>
             <div class="col-3"></div>
@@ -127,10 +137,12 @@
             <li>for</li>
             <ul>
                 <li>for (let változónév = kezdőérték; feltétel; miTörténjen) {}</li>
-                <li>for (let i = 0; i < 5; i++) {} /Létrehoz egy változót, aminek az értéke 0. Addig ismételje a ciklust, amíg a változó értéke kisebb, mint öt. Ha kisebb, akkor növelje egyel az értékét.</li>
+                <li>for (let i = 0; i < 5; i++) {} /Létrehoz egy változót, aminek az értéke 0. Addig ismételje a
+                        ciklust, amíg a változó értéke kisebb, mint öt. Ha kisebb, akkor növelje egyel az értékét.</li>
             </ul>
         </ul>
-        <li>A const kulcsszóval definiált objektumok és tömbök tartalmát meg tudom vátoztatni, a tulajdonságát nem. </li>
+        <li>A const kulcsszóval definiált objektumok és tömbök tartalmát meg tudom vátoztatni, a tulajdonságát nem.
+        </li>
         <li>A for in ciklus a kulcsokon megy végig, míg a for of az értékeken.</li>
         <li>document.getElementById("Azonosító") /elem kiválasztása azonosítóval</li>
         <li>document.getElementsByName("Név") /elemek kiválasztása névvel</li>
@@ -142,16 +154,171 @@
         <ul>
             <li>Element.prototype.Változó = function() {}, /metódus integrálása az elementekbe.</li>
             <li>Változó.getAttribute("Bármi") /megadja az elem valamely atribútumát</li>
-            <li>Változó.setAttribute("Valamilyét, valamire")  /módosítja az elem atribútumát</li>
+            <li>Változó.setAttribute("Valamilyét, valamire") /módosítja az elem atribútumát</li>
             <li>példa</li>
             <ul>
                 <li>for (let element in myNodeList) {
                     if (element.stle) {
-                        element.style.color = "grey";
+                    element.style.color = "grey";
                     }
-                }</li>
-                <li>Bevezetek egy element változót a myNodeList objektumba. Ha ez az elem rendelkezik style atribútummal, 
+                    }</li>
+                <li>Bevezetek egy element változót a myNodeList objektumba. Ha ez az elem rendelkezik style
+                    atribútummal,
                     akkor legyen a színe szürke.</li>
+            </ul>
+            <li>több elem módosítása fv-el</li>
+            <ul>
+                <li>function massModify(selector, attribute, value) {
+                    let nodeList = document.querySelectorAll(selector);
+                    for (let i = 0; i < nodeList.length; i++) { nodeList[i][attribute]=value; } }</li>
+                <li>massModify("input", "placeholder", "érték")</li>
+            </ul>
+            <li>nem self-closed elemek esetén a tegnek lehetnek gyerekei</li>
+            <ul>
+                <li>document.querySelector("input#topInput").childElementCount</li>
+                <li>document.querySelector("div").childElementCount</li>
+                <li>document.querySelector("div.form-group:nth-child(2)").children</li>
+                <li>document.querySelector("div.form-group:nth-child(3)").childNodes</li>
+                <li>document.querySelector("div.form-group:nth-child(3)").firstChild</li>
+                <li>document.querySelector("div.form-group:nth-child(3)").firstElementChild</li>
+                <li>document.querySelector("div.form-group:nth-child(3)").lastChild</li>
+                <li>document.querySelector("div.form-group:nth-child(3)").lastElementChild</li>
+            </ul>
+            <li>child hozzáadása js-tel</li>
+            <ul>
+                <li>
+                    let helpText = document.createElement("small");
+                    helpText.className = "form-text text-muted";
+                    helpText.innerHTML = "Adja meg a feltéteket!";
+                    console.log( helpText );
+                </li>
+                <li>
+                    let parent = document.querySelector("div.form-group:nth-child(1)");
+                    parent.appendChild(helpText);
+                </li>
+                <li>parent.removeChild(helpText);</li>
+            </ul>
+            <li>eseménykezelő hozzáadása js-tel</li>
+            <ul>
+                <li>Felülírás:</li>
+                <li>
+                    let sendButton = document.querySelector("form .btn .btn-primary");
+                    sendButton.onclick = function() {
+                    alert("Hello JS!")
+                    }
+                </li>
+                <li>Hozzáadás:</li>
+                <li>let sendButton = document.querySelector("form .btn.btn-primary");
+                    sendButton.addEventListener("click", function() {
+                    alert("Működik!");
+                    });</li>
+                <li>
+                    window.addEventListener("resize", function() {
+                    console.log(this.innerHeight, innerWidth);
+                    });
+                </li>
+                <li>eseménykezelőnél nincs szükség az on előtagra</li>
+                <li>űrlapesemények</li>
+                <ul>
+                    <li>let orderForm = document.querySelector("#orderForm");
+                        orderForm.addEventListener("submit", function(ev) {
+                        ev.preventDefault();
+
+                        let inputs = this.querySelectorAll("input");
+                        let values = {};
+                        for (let i = 0; i < inputs.length; i++) { values[inputs[i].name]=inputs[i].value; } console.log(
+                            values );</li>
+                </ul>
+            </ul>
+            <li>parent kezelése js-ben</li>
+            <ul>
+                <li>let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']");
+                    let alertCloseEventHandlerFunction = function(ev) {
+                        this.parentElement.style.display = "none";
+                    };
+                    
+                    for (let = i = 0; i< alertCloseButtons.length; i++) {
+                        alertCloseButtons[i].addEventListener("click", alertCloseEventHandlerFunction); 
+                    }</li>
+            </ul>
+            <li>switch</li>
+            <ul>
+                <li>
+                    new Date
+                    Fri Aug 28 2020 14:12:08 GMT+0200 (közép-európai nyári idő)
+                    new Date(2019, 5, 2)
+                    Sun Jun 02 2019 00:00:00 GMT+0200 (közép-európai nyári idő)
+                </li>
+                <li>
+                    let weekDay = new Date().getDay();
+                    let dayName = '';
+                    switch(weekDay) { 
+                        case 0: dayName = "Vas"; 
+                        break;
+                        case 1: dayName = "Hét";
+                        break; 
+                        case 2: dayName = "Ked";
+                        break; 
+                        case 3: dayName = "Sze";
+                        break; 
+                        case 4: dayName = "Csü";
+                        break; 
+                        case 5: dayName = "Pén";
+                        break; 
+                        case 6: dayName = "Szo";
+                        break;
+                        default: dayName = "unknown";
+                    }
+                </li>
+            </ul>
+            <li>while</li>
+            <ul>
+                <li>
+                    let i = 0;
+                    while(i < 10 ) { 
+                        i++; 
+                        console.log(i);
+                    }
+                </li>
+                <li>
+                    let animal = {name: "Cat", age: 3};
+                    let keys = Object.keys(animal); 
+                    i = 0; 
+                    while (i < keys.length ) {
+                        console.log(animal[keys[i]]); 
+                        i++;
+                    } 
+                </li>
+                <li>dowhile</li>
+                <ul>
+                    <li>let i = 10;
+                        do {
+                            console.log(i);
+                            i++;
+                        } 
+                        while(i < 0);
+                    </li>
+                <li>DOM while</li>
+                <ul>
+                    <li>let toppings = [
+                        "szalonna",
+                        "hagyma",
+                        "tükörtojás",
+                        "libamáj",
+                        "extra sonka"
+                    ];
+                    let toppingsSelect = document.querySelector("#topInput");
+                    
+                    let index = 0;
+                    while(index < toppings.length) {
+                        let option = document.createElement("option");
+                        option.value = index;
+                        option.innerHTML = toppings[index];
+                        toppingsSelect.appendChild(option);
+                        index++;
+                    }</li>
+                </ul>
+            </ul>
             </ul>
         </ul>
     </ul>
