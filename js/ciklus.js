@@ -35,3 +35,36 @@ for (let i4 = 0; i4 < fruits4.length; i4++) {
     console.log( fruits4[i4] );
 }
 
+/*
+For in ciklus
+
+Objektumok esetében for in ciklus kell, tömbök esetében lehetséges
+kulcsal kiválasztás objektum.kulcs, de ha változó a kulcs akkor objektum[]
+*/
+let user2 = {
+    name: "Kiss Ramóna",
+    age: 20,
+    city: "Bp"
+};
+
+for (let k in user2) {
+    console.log("Key: ", k, 'value: ', user2[k] );
+}
+
+
+
+/*
+For of ciklus
+Iterálhatóság esetén működik. 
+*/
+//A tömb iterálható(tudja melyik elem melyik után jön)
+let cars2 = ["Volvo", "Bmw", "Opel"];
+for (let cars3 of cars2) {
+    console.log(cars3);
+}
+
+//Az objektum nem iterálható(nem tudja, melyik elem melyik után jön), ezért konkretizálnom kell.
+let user3 = {name: "Pisti", age: 33, email: "pisti@dummymail.hu"};
+for (let entry of Object.entries(user3)) {
+    console.log( entry[0], entry[1]);
+}

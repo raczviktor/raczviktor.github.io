@@ -24,7 +24,7 @@
                 <form action="">
                     <div class="form-group">
                         <label for="">Feltét</label>
-                        <input type="text" name="top-input" class="form-control">
+                        <input id="topInput" type="text" name="top-input" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Mennyiség</label>
@@ -130,11 +130,32 @@
                 <li>for (let i = 0; i < 5; i++) {} /Létrehoz egy változót, aminek az értéke 0. Addig ismételje a ciklust, amíg a változó értéke kisebb, mint öt. Ha kisebb, akkor növelje egyel az értékét.</li>
             </ul>
         </ul>
-        <li>Operátorok</li>
+        <li>A const kulcsszóval definiált objektumok és tömbök tartalmát meg tudom vátoztatni, a tulajdonságát nem. </li>
+        <li>A for in ciklus a kulcsokon megy végig, míg a for of az értékeken.</li>
+        <li>document.getElementById("Azonosító") /elem kiválasztása azonosítóval</li>
+        <li>document.getElementsByName("Név") /elemek kiválasztása névvel</li>
+        <li>document.getElementsByClassName("Osztály") /elemek kiválasztása osztállyal)</li>
+        <li>document.getElementsByTagName("Tag") /elemek kiválasztása taggel</li>
+        <li>document.querySelector("bármi") /elem kiválasztása</li>
+        <li>document.querySelectorAll("bármi") /elemek kiválasztása</li>
+        <li>Ezekkel a selectorokkal kiválasztott elemek lementeve változóba egy element objektumot kapunk</li>
         <ul>
-            <li></li>
+            <li>Element.prototype.Változó = function() {}, /metódus integrálása az elementekbe.</li>
+            <li>Változó.getAttribute("Bármi") /megadja az elem valamely atribútumát</li>
+            <li>Változó.setAttribute("Valamilyét, valamire")  /módosítja az elem atribútumát</li>
+            <li>példa</li>
+            <ul>
+                <li>for (let element in myNodeList) {
+                    if (element.stle) {
+                        element.style.color = "grey";
+                    }
+                }</li>
+                <li>Bevezetek egy element változót a myNodeList objektumba. Ha ez az elem rendelkezik style atribútummal, 
+                    akkor legyen a színe szürke.</li>
+            </ul>
         </ul>
     </ul>
+
 
     <script src="js/main.js"></script>
     <script src="js/scope.js"></script>
@@ -143,6 +164,8 @@
     <script src="js/operator.js"></script>
     <script src="js/ternary.js"></script>
     <script src="js/algo.js"></script>
+    <script src="js/object.js"></script>
+    <script src="js/methods.js"></script>
 
 </body>
 

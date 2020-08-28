@@ -68,6 +68,16 @@ ciklus amíg van még szám, addig
     feltétel vége
 ciklus vége
 */
+let numericArray3 = [1, 3, 2, 5, 4, 7, 6, 9];
+let biggest = numericArray3[0];
+
+for (let i3 = 0; i3 < numericArray3.length; i3++) {
+    if (numericArray3[i3] > biggest) {
+        biggest = numericArray3[i3];
+    }
+}
+
+console.log("Biggest element:", biggest);
 
 //Eldöntés algoritmusa
 /*
@@ -79,4 +89,13 @@ ciklus amíg van elem és nem találat, addig
     feltétel vége
 ciklus vége
 */
+let numericArray4 = [1, 3, 2, 5, 4, 7, 6, 9];
+let contains = false;
 
+for (let i4 = 0; i4 < numericArray4.length && contains == false; i4++) {
+    if (numericArray4[i4] == 5) {
+        contains = true;
+    }
+}
+
+console.log("This array is contains 5:", contains);
