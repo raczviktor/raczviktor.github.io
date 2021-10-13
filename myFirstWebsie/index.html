@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a dummy site.">
+    <meta name="keywords" content="dummysite">
+    <title>Rácz Viktor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="assets/aperture.svg">
+</head>
+
+<body>
+    <header>
+        <nav class="topNav" id="navBar">
+            <a id="logo" class="active" href="index.html">
+                <img src="assets/aperture.svg" alt="Home">
+            </a>
+            <a href="/" id="home" class="homeBtn">Home</a>
+            <a href="#defs"class="navItem" id="shortcut" >Technology Wiki</a>
+            <a target="_blank" class="navItem" href="https://www.w3schools.com/">W3School</a>
+            <a target="_blank" class="navItem" href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+            <a target="_blank" class="navItem" href="https://stackoverflow.com/">Stack Overflow</a>
+            <a href="javascript:void(0);" class="moreIcon" onclick="fullList()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article id="intro">
+                <h1 id="name">Rácz Viktor</h1>
+                <h2 class="articleTitles">Junior Developer</h2>
+                <p>Hello! I'm Viktor Rácz, a former deputy chef. I am currently studying frontend programming and really
+                    enjoy it. </p>
+            </article>
+            <p id="spacer"> - - - </p>
+        </section>
+        <section id="defs">
+            <h1 id="defsTitle">Technology Wiki</h1>
+            <article>
+                <h2>Logic Gate</h2>
+                <p>An idealized or physicalphysical device that performs a basic logical operation on one or more binary
+                    inputs
+                    and produces a binary output.</p>
+            </article>
+            <article>
+                <h2>ASCII</h2>
+                <p>As English name is American Standard Code for Information Interchange. Computers only understand
+                    numbers, so it describes the numbered values ​​needed to interpret the characters 'a' or '@'.</p>
+            </article>
+            <article>
+                <h2>RAM</h2>
+                <p>A random access read / write storage device. Stores the programs to be executed by the CPU and the
+                    data to be processed. The speed at which a particular piece of memory is accessed is independent of
+                    its location.</p>
+            </article>
+            <article>
+                <h2>Algorithm</h2>
+                <p>A series of instructions used in computing that can be read and interpreted by man to communicate
+                    directly or indirectly (for example, after translation into machine code) to a computer how to
+                    perform a particular task.</p>
+            </article>
+            <article>
+                <h2>DNS</h2>
+                <p>A hierarchical, highly decentralized naming system for computers, services, and any resource
+                    connected to the Internet or a private network.</p>
+            </article>
+            <article>
+                <h2>HTTP</h2>
+                <p>An application protocol for distributed, collaborative and hypermedia information systems. The basis
+                    of data communication on the World Wide Web. This is the basic protocol for exchanging and moving
+                    hypertext.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div id="author">
+                Author: Viktor Rácz <br> 2021 &copy;
+        </div>
+        <div>
+            <a target="_blank" href="https://www.greenfoxacademy.com/">
+                <img id="gfImage"
+                    src="https://uploads-ssl.webflow.com/598435743262c800013158eb/598c28e3153f320001974cdf_green_fox_logo_full.svg"
+                    alt="Green Fox">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function fullList() {
+            var x = document.getElementById("navBar");
+            if (x.className === "topNav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topNav";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
