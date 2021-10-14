@@ -11,6 +11,51 @@ header {
     background-color: #333333;
 }
 
+main {
+    padding-top: 5%;
+    margin: auto;
+    max-width: 80%;
+}
+
+h2 {
+    color: #ff0099;
+}
+
+img {
+    height: 48px;
+}
+
+footer {
+    margin-top: 10%;
+    background-color: #333333;
+}
+
+#spacer {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin: 5%;
+}
+
+#name {
+    font-size: 300%;
+    font-weight: bold;
+}
+
+#defsTitle {
+    text-align: center;
+}
+
+
+#footerContent {
+    color: #EEEEEE;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40%;
+    padding: 1% 10% 1% 10%;
+
+}
 
 
 
@@ -19,24 +64,45 @@ header {
 
 
 
-/* NAVBAR */
-.topNav {
+/* DESKTOP NAVBAR */
+
+.navClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     overflow: hidden;
     font-weight: bold;
     font-family: monospace;
 }
 
-.topNav a {
-    float: left; 
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 2px;
-    margin-left: auto;
-    margin-right: auto; 
-    text-align: center;
-    padding: 14px 16px;
+#logoDiv {
+    display: flex;
+    align-items: flex-start;
+}
+
+#logoDiv a{
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 0;
+}
+
+#btnDiv a {
     text-decoration: none;
     font-size: 20px;
+    padding: 20px;
+    margin-top: 1px;
+    margin-right: 0px;
+    margin-bottom: 1px;
+    margin-left: 0px;
 }
 
 .navItem {
@@ -52,19 +118,8 @@ header {
     color: #333333;
 }
 
-
 .topNav a.active {
     background-color: #ff0099;
-}
-
-.topNav .moreIcon {
-    display: none;
-    background-color: #ff0099;
-    color: #333333;
-}
-
-#logo {
-    margin-right: 45%;
 }
 
 #logo :hover {
@@ -85,55 +140,49 @@ header {
     color: #333333;
 }
 
-
-
-
-
-
-
-
-
-
-main {
-    padding-top: 5%;
-    margin: auto;
-    max-width: 80%;
+/* Hide on desktop */
+nav.respNav {
+    display: none;
 }
 
-h2 {
-    color: #ff0099;
-}
 
-#spacer {
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    margin: 5%;
-}
 
-#name {
-    font-size: 300%;
-    font-weight: bold;
-}
+/* RESP NAVBAR */
 
-#defsTitle {
-    text-align: center;
-}
 
-footer {
-    margin-top: 10%;
-    background-color: #333333;
-}
-
-#footerContent {
-    color: #EEEEEE;
-    width: 80%;
+#respLogoDiv {
     display: flex;
     justify-content: space-between;
-    gap: 40%;
-    padding: 1% 10% 1% 10%;
-
+    align-items: flex-end;
+    overflow: hidden;
 }
+
+#respLogoDiv a{
+    padding: 17px;
+    margin: 0%;
+}
+
+#respBtnDiv {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; 
+}    
+
+#respBtnDiv a{
+    padding: 0%; 
+}
+
+
+#respLogo {
+    background-color: #ff0099;
+}
+
+
+
+
+
+
+
 
 
 
@@ -141,64 +190,48 @@ footer {
 
 
 /* Responsive View */
-@media screen and (max-width: 1100px) {
-    .topNav a:not(:first-child) {
-        display: none;
-    }
-    .topNav a.moreIcon {
-        float: right;
-        display: block;
-    } 
-    .topNav.responsive {
-        position: relative;
-    }
-    .topNav.responsive .moreIcon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topNav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    #logo {
-        margin: auto;
-    }
-    
-    header {
-        padding: 0;
-    }
-    .topNav a {
-        font-size: 35px;
-        margin: auto;
-    }
-    
-    .homeBtn {
-        border: solid 1px #333333;
-        border-radius: 0;
-    }
-    
-    #shortcut {
-        display: none;
-    }
+@media screen and (max-width: 980px) {
     #home {
         display: none;
     }
-    #author {
-        width: 30%;
+}
+@media screen and (max-width: 880px) {
+    #w3s {
+        display: none;
+    } 
+}
+@media screen and (max-width: 720px) {
+    #mdn {
+        display: none;
     }
-    #gfImage {
-        width: 30%;
-        
+}
+
+
+@media screen and (max-width: 400px) {
+    nav.topNav {
+        display: none;
+    }
+    nav.respNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        overflow: hidden;
+    }
+
+    .navLogo :hover {
+        background-color: #EEEEEE;
+    }
+
+    header {
+        padding: 0 5% 0 0;
+    }
+
+    img {
+        height: 36px;
     }
     #footerContent {
         gap: 5%;
         margin: 5%;
         padding: 5%;
     }
-
 }
-
-
-

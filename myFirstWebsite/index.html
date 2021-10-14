@@ -18,19 +18,43 @@
 
 <body>
     <header>
-        <nav class="topNav" id="navBar">
-            <a id="logo" class="active" href="index.html">
-                <img src="assets/aperture.svg" alt="Home">
-            </a>
-            <a href="index.html" id="home" class="homeBtn">Home</a>
-            <a href="#defs"class="navItem" id="shortcut" >Technology Wiki</a>
-            <a target="_blank"  class="navItem" href="https://www.w3schools.com/" rel="noreferrer">W3School</a>
-            <a target="_blank"  class="navItem" href="https://developer.mozilla.org/en-US/" rel="noreferrer">MDN Web Docs</a>
-            <a target="_blank"  class="navItem" href="https://stackoverflow.com/" rel="noreferrer">Stack Overflow</a>
-            <a href="javascript:void(0);" class="moreIcon" onclick="fullList()">
-                <i class="fa fa-bars"></i>
-            </a>
+        <nav class="navClass topNav" id="navBar">
+            <div id="logoDiv">
+                <a id="logo" class="active" href="index.html">
+                    <img src="assets/aperture.svg" alt="Home">
+                </a>
+            </div>
+            <div id="btnDiv">
+                <a href="index.html" id="home" class="homeBtn">Home</a>
+                <a target="_blank" class="navItem" id="w3s" href="https://www.w3schools.com/" rel="noreferrer">W3School</a>
+                <a target="_blank" class="navItem" id="mdn" href="https://developer.mozilla.org/en-US/" rel="noreferrer">MDN Web Docs</a>
+                <a target="_blank" class="navItem" href="https://stackoverflow.com/" rel="noreferrer">Stack Overflow</a>
+                <a target="_blank" class="navItem"href="https://www.greenfoxacademy.com/">GreenFox</a>
+            </div>
         </nav>
+
+
+        <nav class="respNav" id="mobileNavBar">
+            <div id="respLogoDiv">
+                <a id="respLogo" class="active" href="index.html">
+                    <img src="assets/aperture.svg" alt="Home">
+                </a>
+                <a target="_blank"  class="navLogo" href="https://www.w3schools.com/" rel="noreferrer">
+                    <img src="https://www.w3schools.com/favicon.ico" alt="W3School">
+                </a>
+                <a target="_blank"  class="navLogo" href="https://developer.mozilla.org/en-US/" rel="noreferrer">
+                    <img src="https://developer.mozilla.org/favicon-48x48.97046865.png" alt="MDN Web Docs">
+                
+                </a>
+                <a target="_blank"  class="navLogo" href="https://stackoverflow.com/" rel="noreferrer">
+                    <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196" alt="Stack Overflow"> 
+                </a>
+                <a target="_blank" href="https://www.greenfoxacademy.com/">
+                    <img src="https://uploads-ssl.webflow.com/598435743262c800013158eb/598c191722e8860001ae1863_favicon-32x32.png" alt="GreenFox">
+                </a>
+            </div>
+        </nav>
+
     </header>
 
     <main>
@@ -89,16 +113,6 @@
         </div>
     </footer>
 
-    <script>
-        function fullList() {
-            var x = document.getElementById("navBar");
-            if (x.className === "topNav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topNav";
-            }
-        }
-    </script>
 
 
 </body>
