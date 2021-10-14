@@ -65,7 +65,6 @@ footer {
 
 
 /* DESKTOP NAVBAR */
-
 .navClass {
     display: flex;
     justify-content: space-between;
@@ -140,47 +139,33 @@ footer {
     color: #333333;
 }
 
-/* Hide on desktop */
+/* Hide mobile navbar on desktop */
 nav.respNav {
     display: none;
 }
 
-
-
-/* RESP NAVBAR */
-
-
+/* Mobile NAVBAR */
 #respLogoDiv {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     overflow: hidden;
 }
-
 #respLogoDiv a{
     padding: 17px;
     margin: 0%;
 }
-
 #respBtnDiv {
     display: flex;
     justify-content: space-between;
     gap: 0; 
 }    
-
 #respBtnDiv a{
     padding: 0%; 
 }
-
-
 #respLogo {
     background-color: #ff0099;
 }
-
-
-
-
-
 
 
 
@@ -207,6 +192,11 @@ nav.respNav {
 }
 
 
+
+
+
+
+/* Mobile View */
 @media screen and (max-width: 400px) {
     nav.topNav {
         display: none;
@@ -228,10 +218,5 @@ nav.respNav {
 
     img {
         height: 36px;
-    }
-    #footerContent {
-        gap: 5%;
-        margin: 5%;
-        padding: 5%;
     }
 }
