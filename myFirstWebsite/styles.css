@@ -12,6 +12,13 @@ header {
 }
 
 
+
+
+
+
+
+
+
 /* NAVBAR */
 .topNav {
     overflow: hidden;
@@ -78,6 +85,15 @@ header {
     color: #333333;
 }
 
+
+
+
+
+
+
+
+
+
 main {
     padding-top: 5%;
     margin: auto;
@@ -107,26 +123,22 @@ h2 {
 footer {
     margin-top: 10%;
     background-color: #333333;
-    color: #ff0099;
-    width: 100%;
+}
+
+#footerContent {
+    color: #EEEEEE;
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    gap: 50%;
+    gap: 40%;
     padding: 1% 10% 1% 10%;
-}
-
-
-#gfImage {
-    padding-left: 10%;
-    padding-right: 30%;
-    width: 50%;
-    display: block;
 
 }
 
-#author {
-    width: 50%;
-}
+
+
+
+
 
 /* Responsive View */
 @media screen and (max-width: 1100px) {
@@ -180,8 +192,9 @@ footer {
         width: 30%;
         
     }
-    footer {
+    #footerContent {
         gap: 5%;
+        margin: 5%;
         padding: 5%;
     }
 
