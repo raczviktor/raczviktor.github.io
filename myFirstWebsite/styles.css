@@ -30,6 +30,29 @@ footer {
     background-color: #333333;
 }
 
+#defs article {
+    margin-top: 2%;
+    border: #333333 solid 1px;
+    border-radius: 3px;
+    background-color: #333333;
+    box-shadow: 2px 2px #AAAAAA;
+}
+
+#defs article h2 {
+    padding: 2%;
+    margin: 0;
+    
+}
+
+#defs article p {
+    padding: 2%;
+    margin: 0;
+    background-color: #EEEEEE;
+    
+}
+
+
+
 #spacer {
     text-align: center;
     font-size: large;
@@ -44,6 +67,12 @@ footer {
 
 #defsTitle {
     text-align: center;
+    padding: 5%;
+    background-color: #ff0099;
+    color: #EEEEEE;
+    box-shadow: 2px 2px #AAAAAA;
+    border: #333333 solid 1px;
+    border-radius: 3px;
 }
 
 
@@ -218,5 +247,9 @@ nav.respNav {
 
     img {
         height: 36px;
+    }
+
+    main {
+        max-width: 95%;
     }
 }
