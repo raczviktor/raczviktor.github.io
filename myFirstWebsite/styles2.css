@@ -9,7 +9,6 @@
 }
 
 body {
-    font-size: 50%;
     font-family: Courier;
     background-image: url(assets/topography.png);
 }
@@ -26,6 +25,76 @@ img {
     width: 2rem;
 }
 
+main {
+    margin: 5% 10%;
+}
+
+h1 {
+    text-align: center;
+    padding: 2%;
+    background-color: #ff0099;
+    color: #EEEEEE;
+    box-shadow: 2px 2px #AAAAAA;
+    border: #333333 solid 1px;
+    border-radius: 3px;
+}
+
+h2 {
+    color: #ff0099;
+}
+
+footer {
+    background-color: #333333;
+}
+
+article {
+    margin-top: 2%;
+    border: #333333 solid 1px;
+    border-radius: 3px;
+    background-color: #333333;
+    box-shadow: 2px 2px #AAAAAA;
+}
+
+article h2 {
+    padding: 2%;
+    margin: 0;
+    
+}
+
+article p {
+    padding: 2%;
+    margin: 0;
+    background-color: #EEEEEE;
+}
+
+
+
+#spacer {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    margin: 4%;
+}
+
+
+
+#myName {
+    font-size: 200%;
+    margin: 0;
+}
+
+#footerContent {
+    color: #EEEEEE;
+    width: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40%;
+    padding: 1% 10% 1% 10%;
+
+}
+
+
+
 /* Add style by one*/
 .header{
     background-color: #333333;
@@ -35,37 +104,39 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 0 5%;
+    border: solid #101010 2px;
 }
 
 .navMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+    margin: 0px 0px;
 }
 
 .navItem {
-    margin-left: 5rem;
-}
-
-/*nAaaaaaaaaaaaaa*/
-.navImg {
-    display: none;
+    margin: 20px;
 }
 
 .navLink{
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: bold;
     color: #ff0099;
+    margin: 2%;
+    padding: 2%;
 }
 
-.navLink:hover{
+.navLink:hover {
+    font-size: 1.6rem;
+    font-weight: 400;
     color: #EEEEEE;
-    background-color: #ff0099;
 }
 
 #logo {
     background-color: #ff0099;
+    padding: 15px 15px 30px 15px;
+    margin: 0 0 0 5%;
 }
 
 
