@@ -136,13 +136,19 @@ article p {
 #logo {
     background-color: #ff0099;
     padding: 15px 15px 30px 15px;
-    margin: 0 0 0 5%;
+    margin: 1% 0 0 5%;
+}
+
+#logo img:hover {
+    transition: 0.9s;
+    transform: rotateZ(360deg);
 }
 
 
 /* Hamburger style*/
 .hamburger {
     display: none;
+    background-color: #ff0099;
 }
 
 .bar {
